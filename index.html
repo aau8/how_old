@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сколько тебе лет?</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="age">
+        <div id="age_block" class="age__info">
+          <div class="age__gif"><img id="age_img" src="#" alt="gif"></div>
+          <h1 class="age-title" id="age_title"></h1>
+          <span class="age-signature" id="age_signature"></span>
+        </div>
+        <div class="age__date">
+          <div class="form">
+            <input id="input" class="age-input" type="number" name="year_birth" autocomplete="off" required>
+            <lable id="lable" for='year_birth' class="input-lable _emptyField">
+              <span>Год рождения</span>
+            </lable>
+          </div>
+          <a id="btn" href="#" class="age-btn">
+            <span>Узнать</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
