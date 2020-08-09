@@ -12,13 +12,11 @@ window.addEventListener('DOMContentLoaded', function(){
     let ageBlock = document.getElementById('age_block')
     let ageDate = document.querySelector('.age__date')
 
-    // emptyField.style.opacity = '1'
     ageBlock.style.display = 'none'
     setTimeout(function() {  
       ageBlock.style.opacity = '0'
     }, 1000)
     ageDate.classList.remove('_active')
-    
     inputLable.classList.add('_emptyField')
   }
 
@@ -93,7 +91,7 @@ window.addEventListener('DOMContentLoaded', function(){
       ageBlock.style.opacity = '1'
     }, 1000)
     ageDate.classList.add('_active')
-    input.classList.remove('_emptyField')
+    inputLable.classList.remove('_emptyField')
   }
 
   // при клике по кнопке "Узнать" выполниться функция btnClick() b whatInfo()
