@@ -6,18 +6,37 @@ window.addEventListener('DOMContentLoaded', function(){
   let ageImg = document.getElementById('age_img')
   let inputLable = document.querySelector('.input-lable')
   let date = new Date().getFullYear()
+  let preloader = document.getElementById('preloader')
+
+  // анимация прелоадера
+  function preFade(e){
+    e.style.opacity = 1
+    let preInterval = setInterval(function() {
+      e.style.opacity = e.style.opacity - 0.05
+      if(e.style.opacity <= 0){
+        clearInterval(preInterval)
+        preloader.style.display = 'none'
+      }
+    }, 16);
+  }
+  window.onload = function (e) {  
+    setTimeout(function () {  
+      preFade(preloader)
+    }, 2000)
+  }
 
   // открытие блока с гифкой, возрастом и подписью
   function inputEmpty(e) {  
     let ageBlock = document.getElementById('age_block')
     let ageDate = document.querySelector('.age__date')
+    let attention = document.getElementById('attention')
 
     ageBlock.style.display = 'none'
     setTimeout(function() {  
       ageBlock.style.opacity = '0'
     }, 1000)
     ageDate.classList.remove('_active')
-    inputLable.classList.add('_emptyField')
+    attention.classList.add('_emptyField')
   }
 
   // вычисление возраста и определение заголовка, подписи и гифки
@@ -96,6 +115,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
   // при клике по кнопке "Узнать" выполниться функция btnClick() b whatInfo()
   btn.addEventListener('click', function(e){
+    e.preventDefault()
     if (input.value == ''){ // пустой input
       inputEmpty()
     }else{
@@ -113,6 +133,10 @@ window.addEventListener('DOMContentLoaded', function(){
         whatInfo()
         btnClick()
       }
-    }else{}
+    }
+    if(input.value != ''){
+      attention.classList.remove('_emptyField')
+    }
   })
+
 })

@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="preloader" class="preloader">
+    <span>Сколько вам лет?</span>
+  </div>
   <div class="wrapper">
     <div class="container">
       <div class="age">
@@ -20,7 +23,8 @@
           <div class="form">
             <input id="input" class="age-input" type="number" name="year_birth" autocomplete="off" required>
             <lable id="lable" for='year_birth' class="input-lable">
-              <span>Год рождения</span>
+              <span class="lable-placeholder">Год рождения</span>
+              <span id="attention" class="lable-attention"><img src="attention.svg" alt="attention"></span>
             </lable>
           </div>
           <a id="btn" href="#" class="age-btn">

@@ -7,6 +7,42 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FDFDFD;
+  z-index: 10000;
+  /* transition: all 1s; */
+  /* animation: preBg 3s infinite; */
+}
+.preloader span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  font-weight: 600;
+  color: #6c7574;
+  white-space: nowrap;
+  text-align: center;
+  animation: preText 1s linear;
+}
+@keyframes preText{
+  from{
+    transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+  to{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
 .wrapper{
   width: 100%;
   height: 100%;
@@ -112,7 +148,7 @@ input::-webkit-inner-spin-button {
   z-index: 5;
   background-color: #FDFDFD;
 }
-.input-lable span{
+.lable-placeholder{
   position: absolute;
   top: 50%;
   left: 10px;
@@ -136,25 +172,41 @@ input::-webkit-inner-spin-button {
 .age-input:valid{
   border: 1px solid #7C7C7C
 }
-.age-input:focus + .input-lable span,
-.age-input:valid + .input-lable span{
+.age-input:focus + .input-lable .lable-placeholder,
+.age-input:valid + .input-lable .lable-placeholder{
   /* font-size: 10px; */
   /* top: -10px; */
   left: -110px;
 }
-._emptyField{
-  transition: all 3s;
-}
-._emptyField:after{
-  content: '';
+.lable-attention{
+  display: block;
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translate(0, -50%);
   width: 12px;
   height: 12px;
-  background: url('../attention.svg') no-repeat center center;
-  background-size: contain;
+  transition: all .2s;
+  opacity: 0;
+}
+.lable-attention img{
+  width: 100%;
+  height: 100%;
+}
+._emptyField{
+  opacity: 1;
+}
+._emptyField img{
+  transform-origin: center center;
+  /* animation: pulse 0.3s linear 1s; */
+}
+@keyframes pulse{
+  from{
+    transform: scale(.8);
+  }
+  to{
+    transform: scale(1);
+  }
 }
 .age-btn {
   width: 100px;
