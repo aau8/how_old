@@ -34,6 +34,7 @@ window.addEventListener('DOMContentLoaded', function(){
     ageBlock.style.display = 'none'
     setTimeout(function() {  
       ageBlock.style.opacity = '0'
+      document.querySelector('.wrapper').style.overflow = 'hidden'
     }, 1000)
     ageDate.classList.remove('_active')
     attention.classList.add('_emptyField')
@@ -46,7 +47,6 @@ window.addEventListener('DOMContentLoaded', function(){
     ageTitle.textContent = age + ' лет'
     if (input.value == ''){ // пустой input
       inputEmpty()
-      signatureContent.textContent = 'Я не экстрасенс! Пожалуйста, введи год рождения)'
     }
     if (age < 0){ // возраст меньше 0
       var gifFuture = ['faZJRjwNERTZC', 'N71kWAa1wM7NC', 'Vqvr9BGv1vhDi']
@@ -108,6 +108,7 @@ window.addEventListener('DOMContentLoaded', function(){
     ageBlock.style.display = 'flex'
     setTimeout(function() {  
       ageBlock.style.opacity = '1'
+      document.querySelector('.wrapper').style.overflow = 'auto'
     }, 1000)
     ageDate.classList.add('_active')
     inputLable.classList.remove('_emptyField')
