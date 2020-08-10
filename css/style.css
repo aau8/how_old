@@ -48,6 +48,7 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 100%;
   background-color: #FDFDFD;
+  overflow: hidden;
 }
 .container{
   max-width: 700px;
