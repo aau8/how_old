@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', function(){
   }
   window.onload = function (e) {  
     setTimeout(function () {  
-      // preFade(preloader)
+      preFade(preloader)
     }, 2000)
   }
 

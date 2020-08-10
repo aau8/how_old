@@ -113,7 +113,7 @@ input::-webkit-inner-spin-button {
   transition: 1s;
 }
 .age__date._active{
-  transform: translate(-50%, 300%) scale(1);
+  transform: translate(-50%, 130px) scale(1);
 }
 .form{
   position: relative;
@@ -224,4 +224,13 @@ input::-webkit-inner-spin-button {
   color: #fff;
   font-weight: 600;
   padding: 10px 0;
+}
+
+@media (max-width: 520px){
+  .age__date{
+    flex-direction: column;
+  }
+  .age-btn{
+    margin: 15px 0 0 0;
+  }
 }
