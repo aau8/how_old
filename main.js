@@ -30,10 +30,13 @@ window.addEventListener('DOMContentLoaded', function(){
     let ageBlock = document.getElementById('age_block')
     let ageDate = document.querySelector('.age__date')
     let attention = document.getElementById('attention')
-
+    let linkAuthor = document.querySelector('.link')
+    
     ageBlock.style.display = 'none'
+    linkAuthor.style.display = 'none'
     setTimeout(function() {  
       ageBlock.style.opacity = '0'
+      linkAuthor.style.opacity = '0'
       document.querySelector('.wrapper').style.overflow = 'hidden'
     }, 1000)
     ageDate.classList.remove('_active')
@@ -104,10 +107,13 @@ window.addEventListener('DOMContentLoaded', function(){
   function btnClick(e) {  
     let ageBlock = document.getElementById('age_block')
     let ageDate = document.querySelector('.age__date')
+    let linkAuthor = document.querySelector('.link')
 
     ageBlock.style.display = 'flex'
+    linkAuthor.style.display = 'flex'
     setTimeout(function() {  
       ageBlock.style.opacity = '1'
+      linkAuthor.style.opacity = '1'
       document.querySelector('.wrapper').style.overflow = 'auto'
     }, 1000)
     ageDate.classList.add('_active')

@@ -115,6 +115,8 @@ body{
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+  opacity: 0;
+  display: none;
 }
 .link__body{
   width: 100%;
