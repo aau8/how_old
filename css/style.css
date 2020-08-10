@@ -27,7 +27,7 @@ input::-webkit-inner-spin-button {
   left: 50%;
   transform: translate(-50%, -50%);
   /* font-size: 70px; */
-  font-size: calc(40px + (70 - 40) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(32px + (70 - 32) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 600;
   color: #6c7574;
   white-space: nowrap;
