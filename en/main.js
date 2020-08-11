@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function(){
   function whatInfo(){
     let age = date - input.value // the difference between the current year (2020) and the input value (age)
     var randomIndex = Math.floor(Math.random() * 3)
-    ageTitle.textContent = age + ' лет'
+    ageTitle.textContent = age + ' years old'
     if (input.value == ''){ // empty input
       inputEmpty()
     }
