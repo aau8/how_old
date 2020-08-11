@@ -26,6 +26,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #2F2F2F;
   font-size: calc(32px + (70 - 32) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 600;
   white-space: nowrap;
