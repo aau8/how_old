@@ -253,9 +253,11 @@ body{
   background-color: #0099FF;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-.age-btn:hover{
-  transform: scale(1.1);
-  background-color: #0077FF;
+@media (min-width: 521px){
+  .age-btn:hover{
+    transform: scale(1.1);
+    background-color: #0077FF;
+  }
 }
 .age-btn:active{
   transform: scale(1);
@@ -274,5 +276,9 @@ body{
   }
   .age-btn{
     margin: 15px 0 0 0;
+  }
+  .age-btn:active{
+    transform: scale(0.85);
+    background-color: #0077FF;
   }
 }
