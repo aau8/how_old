@@ -147,7 +147,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform: translate(-0%, -0%) scale(1.5);
+  transform: translate(-0%, -0%) scale(1.3);
   transition: 1s;
 }
 .age__date._active{
